@@ -20,6 +20,7 @@ The raw CSV is **not committed to this repo**. The notebook downloads it automat
    - **SARIMA** `(1,1,1)x(1,1,1,12)` on the log-transformed series — a classical statistical model that directly encodes trend and 12-month seasonality.
    - **LSTM** — a windowed (12-month lookback) recurrent neural network, evaluated with honest walk-forward one-step-ahead forecasting (each prediction uses the true preceding months, not the model's own prior predictions).
 4. **Evaluation** — RMSE, MAE, and MAPE on the 24 held-out months, plus visual forecast-vs-actual comparison.
+5. **Runtime comparison** — training and prediction time for both models, since accuracy isn't the only thing that matters for what's actually deployable (e.g. frequent retraining, forecasting many series at scale).
 
 ## Results
 
